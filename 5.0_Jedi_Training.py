@@ -1,15 +1,16 @@
-  #Sign your name:________________
+  #Sign your name: Dylan Smith
 
 '''
  1. Make the following program work.
-   '''  
-     print("This program takes three numbers and returns the sum.")
-     total = 0
+   '''
 
-     for i in range(3):
-         x = input("Enter a number: ")
-         total = total + i
-     print("The total is:", x)
+#print("This program takes three numbers and returns the sum.")
+#total = 0
+
+#for i in range(3):
+    #i = int(input("Enter a number: "))
+    #total += i
+#print("The total is:", total)
   
 
 
@@ -17,7 +18,8 @@
   2. Write a Python program that will use a FOR loop to print the even
      numbers from 2 to 100, inclusive.
 '''
-
+#for i in range(2,101,2):
+    #print(i)
 
 
 
@@ -27,6 +29,14 @@
      10 down to, and including, 0. Then print the words Blast off! Remember, use
      a WHILE loop, don't use a FOR loop.
 '''
+#i=11
+#while i <=11:
+   # i -= 1
+    #if i == -1:
+       #break
+   # print(i)
+#print("Blast Off")
+
 
 
 
@@ -37,7 +47,9 @@
   4. Write a program that prints a random integer from 1 to 10 (inclusive).
 '''
 
-
+#import random
+#my_number = random.randrange(1,11)
+#print(my_number)
 
 
 
@@ -52,3 +64,19 @@
      if statements.
       
 '''
+print("This program takes seven numbers and returns the sum,as well as telling you how many were negative, positive, or 0.")
+total = 0
+negatives = 0
+positives = 0
+zeros = 0
+for i in range(7):
+    i = int(input("Enter a number: "))
+    if i <= -1:
+        negatives += 1
+    elif i == 0:
+        zeros += 1
+    else:
+        positives += 1
+    total+= i
+print("You input", negatives,"negative numbers\nYou input", positives,"positive numbers\nAnd you input", zeros,"zeros")
+print("The total is:", total)
