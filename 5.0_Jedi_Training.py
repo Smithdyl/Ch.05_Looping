@@ -7,9 +7,9 @@
 #print("This program takes three numbers and returns the sum.")
 #total = 0
 
-#for i in range(3):
-    #i = int(input("Enter a number: "))
-    #total += i
+#for number in range(3):
+    #number = int(input("Enter a number: "))
+    #total += number
 #print("The total is:", total)
   
 
@@ -29,12 +29,12 @@
      10 down to, and including, 0. Then print the words Blast off! Remember, use
      a WHILE loop, don't use a FOR loop.
 '''
-#i=11
-#while i <=11:
-   # i -= 1
-    #if i == -1:
+#countdown=11
+#while countdown <=11:
+   # countdown -= 1
+    #if countdown == -1:
        #break
-   # print(i)
+   # print(countdown)
 #print("Blast Off")
 
 
@@ -78,5 +78,5 @@ for i in range(7):
     else:
         positives += 1
     total+= i
-print("You input", negatives,"negative numbers\nYou input", positives,"positive numbers\nAnd you input", zeros,"zeros")
+print("You input", negatives,"negative number/s\nYou input", positives,"positive number/s\nAnd you input", zeros,"zero/s")
 print("The total is:", total)
