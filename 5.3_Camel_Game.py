@@ -10,7 +10,7 @@ thirst=0
 miles_traveled=0
 duck_tiredness=0
 hydro_flask=6
-goose_distance=-40
+goose_distance=-20
 print("Welcome to Duck Leader")
 instructions=input("Would you like instructions? Y or N?")
 if instructions.lower()== "y":
@@ -32,16 +32,18 @@ print()
 
 while not done:
     if goose_distance<miles_traveled:
-        if thirst<6 or duck_tiredness<8:
+        if thirst<6:
+            print()
+        if duck_tiredness<8:
             oasis=random.randint(1,20)
             if oasis==7:
-                print("You have found a bird fountain\n You refilled your hydro flask")
+                print("You have found a bird fountain\nYou refilled your hydro flask")
                 hydro_flask=6
-            if goose_distance>-15 and goose_distance<0:
-                print("The geese are hot on your tail. Only",goose_distance,"away.")
-            if thirst>=4 and thirst<6:
+            if goose_distance>miles_traveled-15 and goose_distance<miles_traveled:
+                print("The geese are hot on your tail. Only",miles_traveled-goose_distance,"miles away.")
+            if thirst>=4 and thirst<=6:
                 print("Your duck friend is thirsty")
-            if duck_tiredness>=5 and duck_tiredness<8:
+            if duck_tiredness>=5 and duck_tiredness<=8:
                 print("Your duck friend is tired")
             if miles_traveled < 200:
                 print()
@@ -51,7 +53,7 @@ while not done:
                     done=True
                 elif user_choice==1:
                     if hydro_flask>=1:
-                        print("You take a drink from your hydro flask")
+                        print("You take a drink from your hydro flask. You have",hydro_flask-1,"drinks left.")
                         thirst=0
                         hydro_flask-=1
                     else:
@@ -76,8 +78,8 @@ while not done:
                     goose_distance+= random.randint(7,14)
                 elif user_choice == 5:
                     print("You have traveled: ",miles_traveled,"miles.")
-                    print("You have ",hydro_flask,"drinks left in your hydro flask.")
-                    print("The geese are",goose_distance,"miles behind you.")
+                    print("You have",hydro_flask,"drinks left in your hydro flask.")
+                    print("The geese are",miles_traveled-goose_distance,"miles behind you.")
                 else:
                     print("Please select a number 1 through 6")
             else:
@@ -96,7 +98,7 @@ while not done:
                     print("Maybe some other time")
                     done = True
         else:
-            print("Your duck friend died")
+            print("Your duck friend died.\nYou made it",miles_traveled,"Miles")
             user_choice = input("Would you like to play again? Y or N?")
             if user_choice.lower() == "y":
                 print("WOOOHOOO")
@@ -111,7 +113,7 @@ while not done:
                 print("Maybe some other time")
                 done = True
     else:
-        print("The jig is up, the geese have caught you.")
+        print("The jig is up, the geese have caught you.\nYou made it",miles_traveled,"miles.")
         user_choice = input("Would you like to play again? Y or N?")
         if user_choice.lower() == "y":
             print("WOOOHOOO")
