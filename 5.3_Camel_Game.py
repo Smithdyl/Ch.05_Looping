@@ -27,7 +27,7 @@ else:
     print("Alrighty then")
     print("Make sure to answer with the # of the command.")
 print()
-input("Type anything when you're ready to begin. ")
+input("Would you like to play hard mode?")
 print()
 
 while not done:

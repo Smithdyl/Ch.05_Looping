@@ -10,7 +10,6 @@ import random
 print("This program will flip a coin 50 times and tell you the outcome.")
 heads = 0
 tails = 0
-
 for i in range(50):
     my_number = random.randrange(0,2)
     if my_number ==0:

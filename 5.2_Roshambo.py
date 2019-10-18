@@ -17,21 +17,20 @@ win=0
 loss=0
 ties=0
 done= False
-user_choice = input("Would you like to stop? y or n?")
-if user_choice.lower() == "y":
-    print("Hope you had fun!")
-    done = True
-else:
-    print("Alright")
-    print()
 while not done:
-    user_choice=int(input("What is your choice?\nEnter 1 for rock\nEnter 2 for paper\nEnter 3 for scissors\n"))
+    print()
+    user_choice=int(input("What is your choice?\nEnter 1 for rock\nEnter 2 for paper\nEnter 3 for scissors\nEnter 4 to quit"))
     if user_choice==1:
         print("You selected rock")
     elif user_choice==2:
         print("You selected paper")
     elif user_choice==3:
         print("You selected scissors")
+    else:
+        print()
+        print("I hope you had fun")
+        done = True
+        break
     print()
     my_number= random.randrange(1,4)
     if my_number==1:
@@ -56,14 +55,7 @@ while not done:
     else:
         print("You lose")
         loss+=1
-    user_choice = input("Would you like to stop? y or n?")
-    print()
-    if user_choice.lower() == "y":
-        print("Hope you had fun!")
-        done = True
-    else:
-        print("Alright down for another go")
-        print()
+
 print()
 if done== True:
     print("Your win/loss was",win,"/",loss,"With",ties,"ties")
